@@ -1,0 +1,42 @@
+{
+  "name": "heathrow",
+  "version": "1.0.0",
+  "description": "Heathrow travel suggestion",
+  "main": "public/index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "webpack-dev-server --inline --history-api-fallback --content-base ./public/ --hot --config webpack.dev.js",
+    "build": "webpack --config webpack.prod.js --progress"
+  },
+  "keywords": [
+    "frontend",
+    "react",
+    "webpack",
+    "redux"
+  ],
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.5",
+    "babel-polyfill": "^6.26.0",
+    "babel-preset-es2015-without-strict": "0.0.4",
+    "babel-preset-react": "^6.24.1",
+    "css-loader": "^0.28.11",
+    "node-sass": "^4.9.3",
+    "postcss-loader": "^2.1.6",
+    "react": "^16.4.2",
+    "react-bootstrap": "^0.32.3",
+    "react-dom": "^16.4.2",
+    "react-router-dom": "^4.3.1",
+    "react-select": "^1.3.0",
+    "redux": "^3.7.2",
+    "redux-thunk": "^2.3.0",
+    "sass-loader": "^7.1.0",
+    "style-loader": "^0.21.0",
+    "webpack": "^3.12.0",
+    "webpack-dev-server": "^2.11.3",
+    "webpack-merge": "^4.1.4",
+    "whatwg-fetch": "^2.0.4"
+  },
+  "author": "Prakash Rajendran",
+  "license": "UNLICENSED"
+}

@@ -1,0 +1,22 @@
+@import '../../styles/global.scss';
+
+.search-container {
+
+    @include boxShadow(0, 0, 8px, 0, $grey);
+
+    .search-header {
+        background-color: #EDF0F6;
+
+        .search-header-logo {
+            img {
+                padding: 0.4em;
+                width: 4em;
+            }
+        }
+        .search-header-caption {
+            line-height: 3.2em;
+            font-size: 1.3em;
+            color: #71558E;
+        }
+    }
+}

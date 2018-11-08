@@ -1,0 +1,220 @@
+// colors
+$white: #ffffff;
+$black: #000000;
+$black-light: #1e1e1e;
+$silver: #f7f7f7;
+$blue: #5b788f;
+$blue-light: #34485e;
+$blue-text: #5e7a91;
+$grey-dark: #9b9b9b;
+$grey: #b8b8b8;
+$grey-light: #a5a5a5;
+$grey-lighter: #cccccc;
+$grey-lightest: #e5e5e5;
+$grey-text: $grey-light;
+$grey-border: $grey;
+$grey-background: #f2f3f4;
+$grey-separator: $grey-lightest;
+$grey-black-light: #333333;
+$grey-black: #494949;
+$grey-darker: #4b4b4b;
+$red: #fa625f;
+$green:  #5cb85c;
+$yellow: #f5a623;
+$red-not-ready: #bd0000;
+$green-dark: #016230;
+$red-dark: #9e1b32;
+
+// breakpoints
+$x-small: 20em;
+$small: 24em;
+$medium: 48em;
+$large: 64em;
+
+// reset
+html {
+  font-size: 100%;
+  height: 100%;
+}
+
+body {
+  font-family: "'Times New Roman', Times, serif";
+  color: $black;
+  background-color: $silver;
+  height: 100%;
+  background: url(/assets/images/blured-background-image.jpg) center 0 no-repeat #e6f1ff;
+}
+
+#app {
+  width: 100%;
+  height: 100%;
+}
+
+.fluid {
+  width: 100%;
+}
+
+.clearfix {
+  clear: both;
+  height: 1px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+button {
+  font-family: "'Times New Roman', Times, serif";
+  color: $black;
+}
+
+select {
+  background-color: transparent;
+}
+
+input[type=password]::-ms-reveal,
+input[type=password]::-ms-clear {
+  display: none;
+}
+
+input[type=text]::-ms-reveal,
+input[type=text]::-ms-clear {
+  display: none;
+}
+
+input[type="text"] {
+  outline: none;
+}
+
+::-ms-reveal,
+::-ms-clear {
+  display: none;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+}
+
+// placeholders
+%container-element {
+  margin: 0 auto;
+}
+
+%clear-fix {
+  clear: both;
+  content: '';
+  display: block;
+}
+
+%center-text {
+  text-align: center;
+}
+
+%uppercase {
+  text-transform: uppercase;
+}
+
+%no-select {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+%error {
+  color: $red;
+  height: 0.3em;
+  margin: 0;
+  padding: 0;
+  font-size: 0.8em;
+}
+
+// mixins
+@mixin truncate($width) {
+  width: $width;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+@mixin container($padding) {
+  padding-top: $padding;
+  padding-bottom: $padding;
+}
+
+@mixin borderRadius($radius) {
+  border-radius: $radius;
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  -o-border-radius: $radius;
+  -ms-border-radius: $radius;
+}
+
+@mixin boxShadow($hor, $ver, $blur, $spread, $color) {
+  box-shadow: $hor $ver $blur $spread $color;
+  -webkit-box-shadow: $hor $ver $blur $spread $color;
+  -moz-box-shadow: $hor $ver $blur $spread $color;
+  -o-box-shadow: $hor $ver $blur $spread $color;
+  -ms-box-shadow: $hor $ver $blur $spread $color;
+}
+
+// common css
+
+.page-content {
+  padding-top: 4.38em;
+}
+
+.content {
+  @extend %container-element;
+  padding: 1em;
+}
+
+.content-radius {
+  @include borderRadius(0.25em);
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.center-text {
+  text-align: center;
+}
+
+.heading-text {
+  color: $grey-text;
+  font-size: 0.8em;
+  font-family: "'Times New Roman', Times, serif";
+}
+
+.item-text {
+  font-size: 1.2em;
+  font-family: "'Times New Roman', Times, serif";
+}
+
+.separator {
+  height: 0;
+  border-top: 1px solid $grey-separator;
+}
+
+.vertical-separator {
+  width: 0;
+  border-right: 1px solid $grey-border;
+}
+
+.Select--single {
+  > .Select-control {
+    .Select-value {
+      padding-right: 3.29em;
+    }
+  }
+}
+
+.content-pane {
+  padding: 2em;
+}

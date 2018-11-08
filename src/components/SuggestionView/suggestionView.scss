@@ -1,0 +1,42 @@
+@import '../../styles/global.scss';
+
+.suggestion-container {
+
+    @include boxShadow(0, 0, 8px, 0, $grey);
+    margin-bottom: 2em;
+
+    .suggestion-header {
+        background-color: #EDF0F6;
+
+        .suggestion-header-logo {
+            img {
+                padding: 0.4em;
+            }
+        }
+        .suggestion-header-caption {
+            line-height: 3.2em;
+            font-size: 1.3em;
+            color: #71558E;
+        }
+    }
+
+    .suggestion-content {
+        padding: 0.6em;
+        background-color: white;
+
+        .suggestion-content-text {
+            font-size: 1.2em;
+            color: #000;
+            padding-bottom: 0.4em;
+            padding-left: 0.4em;
+        }
+
+        .suggestion-content-btn {
+            text-align: center;
+            background-color: #7e5da4;
+            color: white;
+            padding: 0.6em;
+        }
+    }
+    
+}
